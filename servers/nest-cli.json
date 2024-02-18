@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/my-cv/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/my-cv/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/my-cv",
+  "projects": {
+    "my-cv": {
+      "type": "application",
+      "root": "apps/my-cv",
+      "entryFile": "main",
+      "sourceRoot": "apps/my-cv/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/my-cv/tsconfig.app.json"
+      }
+    },
+    "cv-services": {
+      "type": "application",
+      "root": "apps/cv-services",
+      "entryFile": "main",
+      "sourceRoot": "apps/cv-services/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/cv-services/tsconfig.app.json"
+      }
+    }
+  }
+}
